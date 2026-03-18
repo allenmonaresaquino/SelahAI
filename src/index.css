@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Quicksand", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Cormorant Garamond", serif;
+  
+  --color-brand-50: #fdfcfb;
+  --color-brand-100: #f7f3f0;
+  --color-brand-200: #eee7e1;
+  --color-brand-300: #e0d4ca;
+  --color-brand-400: #cbb6a6;
+  --color-brand-500: #b59a86;
+  --color-brand-600: #9e7f6a;
+  --color-brand-700: #856856;
+  --color-brand-800: #6d5446;
+  --color-brand-900: #5b473c;
+  
+  --color-accent-soft: #e8f3f1;
+  --color-accent-deep: #7ba8a1;
+}
+
+body {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: var(--color-brand-900);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.message-shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Animated background elements */
+.bg-blob {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.4;
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(100px, 50px) scale(1.1); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-200);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-300);
+}
+
+.prose p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.prose strong {
+  color: var(--color-brand-800);
+  font-weight: 600;
+}
