@@ -87,6 +87,36 @@ body {
 }
 
 .prose strong {
+  color: var(--color-brand-900);
+  font-weight: 700;
+  background-color: rgba(224, 212, 202, 0.4);
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-brand-400);
+  background-color: rgba(247, 243, 240, 0.6);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  font-family: var(--font-serif);
   color: var(--color-brand-800);
-  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.prose blockquote p {
+  margin-bottom: 0;
+}
+
+.prose-invert strong {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.prose-invert blockquote {
+  border-left-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
 }
